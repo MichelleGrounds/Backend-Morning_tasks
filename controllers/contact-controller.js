@@ -3,6 +3,7 @@ exports.contact = (req, res, next) => {
   if (!name || !email || !subject || !message) {
     next({ status: 400, msg: "Bad Request" });
   } else {
-    res.send({ msg: `Thanks for contacting me, ${name}` });
+    //res.send({ msg: `Thanks for contacting me, ${name}` });
+    res.render("contact", {name})
   }
 };
